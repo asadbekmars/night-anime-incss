@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(135deg, #4964df 0%, #653c8f 100%);
+    overflow-y: hidden;
+}
+
+section{
+    height: 80vh;
+    width: 70%;
+    border:none;
+    margin: 5em auto;
+    background: url(/assets/Img_1.png);
+    background-size: cover;
+    box-shadow: 1px 2px 60px black;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* YOL */
+.surface{
+    height: 140px;
+    width: 500%;
+    background: url(/assets/Img_02.png);
+    display: block;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background-repeat: repeat-x;
+    animation-name: moveright;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* CAR */
+.car{
+    position: absolute;
+    bottom: 8%;
+    left: 25%;
+    animation: move 1s linear infinite;
+}
+
+@keyframes moveright{
+    100%{
+        transform: translateX(-2950px);
+    }
+}
+
+@keyframes move{
+    0%,100%{
+        transform: translateY(-1px);
+    }
+
+    50%{
+        transform: translateY(2px);
+    }
+}
